@@ -1,0 +1,10 @@
+# Find single number in a list where all but 1 have more than one elements
+
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        
+        single = nums[0]
+        for i in nums[1:]:
+            single ^= i
+        
+        return single
